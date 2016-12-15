@@ -1,0 +1,2 @@
+C:\Users\k10273\Source\Workspaces\HardwareHub\HardwareHubTwainClient\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.exe.config
+C:\Users\k10273\Source\Workspaces\HardwareHub\HardwareHubTwainClient\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.csproj.ResolveComReference.cache
