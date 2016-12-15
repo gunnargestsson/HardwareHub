@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Hardware_Hub_Serial_Port_Client.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HubURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://hub.dynamics.is/HardwareHub.asmx</Value>
+    </Setting>
+    <Setting Name="SerialPortGUID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{A184EAA1-44F6-4313-9B3A-4B370D702CEA}</Value>
+    </Setting>
+    <Setting Name="PortName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="BaudRate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9600</Value>
+    </Setting>
+    <Setting Name="Parity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="DataBits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="StopBits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">One</Value>
+    </Setting>
+    <Setting Name="AutoOpenPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="Hardware_Hub_Serial_Port_Client_DynamicsHub_Hub" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hub.dynamics.is/HardwareHub.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
