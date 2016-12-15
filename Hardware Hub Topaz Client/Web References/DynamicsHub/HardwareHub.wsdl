@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.dynamics.is/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.dynamics.is/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.dynamics.is/">
+      <s:element name="DataSourceGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="securitypin" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSourceGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataSourceGetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSourceSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newDataSource" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="securitypin" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSourceSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataSourceSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCommandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendCommandResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveCommandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveCommandResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBarcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBarcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendBarcodeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveBarcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveBarcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveBarcodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendImageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveImageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendXmlResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DataSourceGetSoapIn">
+    <wsdl:part name="parameters" element="tns:DataSourceGet" />
+  </wsdl:message>
+  <wsdl:message name="DataSourceGetSoapOut">
+    <wsdl:part name="parameters" element="tns:DataSourceGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataSourceSetSoapIn">
+    <wsdl:part name="parameters" element="tns:DataSourceSet" />
+  </wsdl:message>
+  <wsdl:message name="DataSourceSetSoapOut">
+    <wsdl:part name="parameters" element="tns:DataSourceSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCommand" />
+  </wsdl:message>
+  <wsdl:message name="SendCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveCommand" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SendStatus" />
+  </wsdl:message>
+  <wsdl:message name="SendStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SendStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveStatus" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendBarcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendBarcode" />
+  </wsdl:message>
+  <wsdl:message name="SendBarcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveBarcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveBarcode" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveBarcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendImageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendImage" />
+  </wsdl:message>
+  <wsdl:message name="SendImageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveImageSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveImage" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveImageSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:SendXml" />
+  </wsdl:message>
+  <wsdl:message name="SendXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:SendXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveXml" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveXmlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HubSoap">
+    <wsdl:operation name="DataSourceGet">
+      <wsdl:input message="tns:DataSourceGetSoapIn" />
+      <wsdl:output message="tns:DataSourceGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataSourceSet">
+      <wsdl:input message="tns:DataSourceSetSoapIn" />
+      <wsdl:output message="tns:DataSourceSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCommand">
+      <wsdl:input message="tns:SendCommandSoapIn" />
+      <wsdl:output message="tns:SendCommandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveCommand">
+      <wsdl:input message="tns:ReceiveCommandSoapIn" />
+      <wsdl:output message="tns:ReceiveCommandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendStatus">
+      <wsdl:input message="tns:SendStatusSoapIn" />
+      <wsdl:output message="tns:SendStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveStatus">
+      <wsdl:input message="tns:ReceiveStatusSoapIn" />
+      <wsdl:output message="tns:ReceiveStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBarcode">
+      <wsdl:input message="tns:SendBarcodeSoapIn" />
+      <wsdl:output message="tns:SendBarcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveBarcode">
+      <wsdl:input message="tns:ReceiveBarcodeSoapIn" />
+      <wsdl:output message="tns:ReceiveBarcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendImage">
+      <wsdl:input message="tns:SendImageSoapIn" />
+      <wsdl:output message="tns:SendImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveImage">
+      <wsdl:input message="tns:ReceiveImageSoapIn" />
+      <wsdl:output message="tns:ReceiveImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendXml">
+      <wsdl:input message="tns:SendXmlSoapIn" />
+      <wsdl:output message="tns:SendXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveXml">
+      <wsdl:input message="tns:ReceiveXmlSoapIn" />
+      <wsdl:output message="tns:ReceiveXmlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HubSoap" type="tns:HubSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DataSourceGet">
+      <soap:operation soapAction="http://www.dynamics.is/DataSourceGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataSourceSet">
+      <soap:operation soapAction="http://www.dynamics.is/DataSourceSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCommand">
+      <soap:operation soapAction="http://www.dynamics.is/SendCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveCommand">
+      <soap:operation soapAction="http://www.dynamics.is/ReceiveCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendStatus">
+      <soap:operation soapAction="http://www.dynamics.is/SendStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveStatus">
+      <soap:operation soapAction="http://www.dynamics.is/ReceiveStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBarcode">
+      <soap:operation soapAction="http://www.dynamics.is/SendBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveBarcode">
+      <soap:operation soapAction="http://www.dynamics.is/ReceiveBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendImage">
+      <soap:operation soapAction="http://www.dynamics.is/SendImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveImage">
+      <soap:operation soapAction="http://www.dynamics.is/ReceiveImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendXml">
+      <soap:operation soapAction="http://www.dynamics.is/SendXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveXml">
+      <soap:operation soapAction="http://www.dynamics.is/ReceiveXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HubSoap12" type="tns:HubSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DataSourceGet">
+      <soap12:operation soapAction="http://www.dynamics.is/DataSourceGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataSourceSet">
+      <soap12:operation soapAction="http://www.dynamics.is/DataSourceSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCommand">
+      <soap12:operation soapAction="http://www.dynamics.is/SendCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveCommand">
+      <soap12:operation soapAction="http://www.dynamics.is/ReceiveCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendStatus">
+      <soap12:operation soapAction="http://www.dynamics.is/SendStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveStatus">
+      <soap12:operation soapAction="http://www.dynamics.is/ReceiveStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBarcode">
+      <soap12:operation soapAction="http://www.dynamics.is/SendBarcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveBarcode">
+      <soap12:operation soapAction="http://www.dynamics.is/ReceiveBarcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendImage">
+      <soap12:operation soapAction="http://www.dynamics.is/SendImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveImage">
+      <soap12:operation soapAction="http://www.dynamics.is/ReceiveImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendXml">
+      <soap12:operation soapAction="http://www.dynamics.is/SendXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveXml">
+      <soap12:operation soapAction="http://www.dynamics.is/ReceiveXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Hub">
+    <wsdl:port name="HubSoap" binding="tns:HubSoap">
+      <soap:address location="http://hub.dynamics.is/HardwareHub.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HubSoap12" binding="tns:HubSoap12">
+      <soap12:address location="http://hub.dynamics.is/HardwareHub.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
