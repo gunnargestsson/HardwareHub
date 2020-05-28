@@ -1,2 +1,19 @@
-C:\Users\k10273\Source\Workspaces\HardwareHub\HardwareHubTwainClient\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.exe.config
-C:\Users\k10273\Source\Workspaces\HardwareHub\HardwareHubTwainClient\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.csproj.ResolveComReference.cache
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.exe.config
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.exe.manifest
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.application
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.exe
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\bin\Debug\Hardware Hub Twain Client.pdb
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.csprojAssemblyReference.cache
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\Interop.TwainControlX.dll
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.csproj.ResolveComReference.cache
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.HardwareHubTwainClient.resources
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.Properties.Resources.resources
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.Select_Process.resources
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.csproj.GenerateResource.cache
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\HardwareHubTwainClient.csproj.CoreCompileInputs.cache
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\Hardware Hub Twain Client.TrustInfo.xml
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\Hardware Hub Twain Client.exe.manifest
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\Hardware Hub Twain Client.application
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\Hardware Hub Twain Client.exe
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\obj\x86\Debug\Hardware Hub Twain Client.pdb
+F:\Git\GitHub\HardwareHub\HardwareHubTwainClient\bin\Debug\TwainControlX.ocx

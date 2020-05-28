@@ -123,6 +123,14 @@ namespace HardwareHubTwainClient
                         parameter4 = "";
                         answer = "SelectDeviceByNameSuccess";
                         break;
+                    case "SelectDeviceByIndex":
+                        int deviceIndex = int.Parse(parameter1);
+                        parameter1 = TwainSelectDeviceByIndex(deviceIndex);
+                        parameter2 = "";
+                        parameter3 = "";
+                        parameter4 = "";
+                        answer = "SelectDeviceByIndexSuccess";
+                        break;
                     case "get_Properties":
                         TwainGetProperties(ref parameter1, ref parameter2, ref parameter3, ref parameter4);
                         answer = "got_Properties";
@@ -211,8 +219,24 @@ namespace HardwareHubTwainClient
 
         private string TwainSelectDeviceByName(string DeviceName)
         {
-            return twain.SelectDeviceByName(DeviceName).ToString();
+            for (int i = 1; i <= twain.DeviceCount; i++)
+                if (DeviceName == twain.get_DeviceName(i - 1))
+                {
+                    twain.CurrentDevice = i - 1;
+                    return "true";
+                }
+            return "false";
         }
+        private string TwainSelectDeviceByIndex(int DeviceIndex)
+        {
+            twain.CurrentDevice = DeviceIndex;
+            return twain.DeviceName[DeviceIndex];
+        }
+        private void TwainSelectDevice()
+        {
+            twain.SelectDevice();
+        }
+
 
         private void TwainGetProperties(ref string properties1, ref string properties2, ref string properties3, ref string properties4)
         {

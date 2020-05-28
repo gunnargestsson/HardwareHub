@@ -13,27 +13,25 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>\\CloudStorage\Dropbox\Public\HardwareHubTwainClient\WebSite\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\HardwareHub\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://www.dynamics.is/wp-content/uploads/HardwareHubTwainClientV2/</InstallUrl>
     <SupportUrl>http://www.dynamics.is/%3fp=1297</SupportUrl>
     <ErrorReportUrl>http://www.dynamics.is/%3fpage_id=2</ErrorReportUrl>
     <ProductName>Twain Client</ProductName>
     <PublisherName>Dynamics.is</PublisherName>
     <SuiteName>Hardware Hub</SuiteName>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -68,11 +66,10 @@
     <AssemblyOriginatorKeyFile>HardwareHubKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>AECB315F35F167A21764BB40ED25BDF54342819D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>FB535C656B0D857C78DBB2A90B777B4C312CED7D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>Kappi ehf.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -139,7 +136,7 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="HardwareHubKey.snk" />
-    <None Include="Nav.2015.light_ClickOnce_Certificate.pfx" />
+    <None Include="Kappi ehf.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

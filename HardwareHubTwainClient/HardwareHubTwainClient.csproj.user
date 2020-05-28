@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
-    <PublishUrlHistory>\\CloudStorage\Dropbox\Public\HardwareHubTwainClient\WebSite\</PublishUrlHistory>
+    <PublishUrlHistory>F:\HardwareHub\|\\CloudStorage\Dropbox\Public\HardwareHubTwainClient\WebSite\</PublishUrlHistory>
     <InstallUrlHistory>http://www.dynamics.is/wp-content/uploads/HardwareHubTwainClientV2/|http://www.dynamics.is/wp-content/uploads/HardwareHubTwainClient/|http://www.dynamics.is/wp-content/uploads/HardwareHubTwainClientNew/|http://www.dynamics.is/wp-content/uploads/HardwareHubTwainClientCopy/</InstallUrlHistory>
     <SupportUrlHistory>http://www.dynamics.is/%3fp=1297</SupportUrlHistory>
     <UpdateUrlHistory />
@@ -10,6 +10,6 @@
     <ErrorReportUrlHistory>http://www.dynamics.is/%3fpage_id=2</ErrorReportUrlHistory>
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
